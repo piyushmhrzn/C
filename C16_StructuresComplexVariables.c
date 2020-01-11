@@ -19,7 +19,7 @@ Description: C programming Essentials practices from Linda.com
 #define MAX_TEAMS                      5
 #define MAX_NAMES                     5         //Maximum Names  that array can hold
 #define MAX_COLORS                    3         //Maximum Colors that array can hold
-#define MAX_AGE                           25
+#define MAX_AGE                           5
 
 //globally defined structure with 5 fields,packed as one entity
 struct person{
