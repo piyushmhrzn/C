@@ -1,6 +1,6 @@
 /*
 ===========================================================================
-Name: C8_Loop_doWhile.c
+Name: C08_Loop_doWhile.c
 Author: Piyush Maharjan
 Version: 1.0
 Copyright: Copyright 2019 MyBuy.LTD

@@ -1,6 +1,6 @@
 /*
 ===========================================================================
-Name: C5_Decisions_TrafficLights.c
+Name: C05_Decisions_TrafficLights.c
 Author: Piyush Maharjan
 Version: 1.0
 Copyright: Copyright 2019 MyBuy.LTD

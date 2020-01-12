@@ -1,6 +1,6 @@
 /*
 ===========================================================================
-Name: C7_Decisions_Stock.c
+Name: C07_Decisions_Stock.c
 Author: Piyush Maharjan
 Version: 1.0
 Copyright: Copyright 2019 MyBuy.LTD

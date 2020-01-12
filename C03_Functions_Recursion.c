@@ -1,6 +1,6 @@
 /*
 ===========================================================================
-Name: C9_Loop_barChart.c
+Name: C03_Functions_Recursion.c
 Author: Piyush Maharjan
 Version: 1.0
 Copyright: Copyright 2019 MyBuy.LTD
@@ -11,34 +11,20 @@ Description: C programming Essentials practices from Linda.com
 #include<stdio.h>
 #include<stdlib.h>
 
-void barChart(void);
-void oneBar(int n);
+void recursiveHalf(int x,float y);
 
 int main()
 {
-    barChart();
-    return EXIT_SUCCESS;
+    recursiveHalf(1,100);
 }
 
-void barChart(void)
+void recursiveHalf(int x,float y)
 {
-    oneBar(1);
-    oneBar(3);
-    oneBar(7);
-    oneBar(9);
-    oneBar(13);
-    oneBar(20);
-    oneBar(45);
-}
+    printf("x:%d and Value: %f\n",x,y);
 
-void oneBar(int n)
-{
-    int i;
-    printf("%3d:",n);
-    for(i=0; i<n; i++)
+    if(x<10)
     {
-        putchar('•');   //ALT+7
+        recursiveHalf((x+1),(y/2));
     }
-    printf("\n");
 }
 

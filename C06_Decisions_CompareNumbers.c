@@ -1,6 +1,6 @@
 /*
 ===========================================================================
-Name: C6_Decisions_CompareNumbers.c
+Name: C06_Decisions_CompareNumbers.c
 Author: Piyush Maharjan
 Version: 1.0
 Copyright: Copyright 2019 MyBuy.LTD
