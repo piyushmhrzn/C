@@ -25,8 +25,12 @@ void writeFormattedReport(void);
 void archiveData(void);
 void disseminateResults(void);
 
+void someFunction(int a, int b);
+void someOtherFunction(int *a, int *b);
+
 int main()
 {
+    /*
     readData();
     validateData();
     processData();
@@ -35,11 +39,42 @@ int main()
     writeFormattedReport();
     archiveData();
     disseminateResults();
+    */
+
+    printf("--- BY VALUE ---\n");
+    int x = 0;
+    int y = 0;
+
+    printf("Before Function call: x=%d  y=%d\n",x,y);
+    someFunction(x,y);
+    printf("After Function call: x=%d  y=%d\n\n",x,y);
+
+    printf("--- BY REFERENCE ---\n");
+
+    printf("Before Function call: x=%d  y=%d\n",x,y);
+    someOtherFunction(&x, &y);
+    printf("After Function call: x=%d  y=%d\n",x,y);
 
     return EXIT_SUCCESS;
 }
 
 //--------FUNCTION DEFINITIONS-------
+
+void someFunction(int a, int b)
+{
+    printf("Values received in Function: a=%d  b=%d\n",a,b);
+    a = 1;
+    b = 2;
+    printf("Values Modified in Function: a=%d  b=%d\n",a,b);
+}
+
+void someOtherFunction(int *a, int *b)
+{
+    printf("Values received in Function: a=%d  b=%d\n",*a, *b);
+    *a = 1;
+    *b = 2;
+    printf("Values Modified in Function: a=%d  b=%d\n",*a, *b);
+}
 
 void readData(void)
 {
