@@ -1,0 +1,17 @@
+# depslib dependency file v1.0
+1578926685 source:e:\programs\c_lynda\project\preprocessor\main.c
+	<stdio.h>
+	<stdlib.h>
+	"C24_myLibrary.h"
+	"C24_myConstants.h"
+	"C24_myMacros.h"
+
+1578926412 e:\programs\c_lynda\project\preprocessor\c24_mylibrary.h
+
+1578925166 e:\programs\c_lynda\project\preprocessor\c24_myconstants.h
+
+1578925335 e:\programs\c_lynda\project\preprocessor\c24_mymacros.h
+
+1578926406 source:e:\programs\c_lynda\project\preprocessor\c24_mylibrary.c
+	<math.h>
+

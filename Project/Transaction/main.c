@@ -1,19 +1,33 @@
+ /*
+===========================================================================
+Name: main.c
+Author: Piyush Maharjan
+Version: 1.0
+Copyright: Copyright 2019 MyBuy.LTD
+Description: C programming Essentials practices from Linda.com
+===========================================================================
+*/
+
+//Linking Header File
 #include "C4_transaction.h"
 
-int main()
+int main(void)
 {
-    int transactionCounter=0;
+	int transactionCounter=0;
     initializeAccount();
     getBalance();
+
     //Perform First Transaction
     askCustomer();
     updateAccount(amount);
     getBalance();
+
     //Perform Second Transaction
     askCustomer();
     updateAccount(amount);
     addGift(25.0);
     getBalance();
+
     //Perform Third Transaction
     askCustomer();
     updateAccount(amount);
@@ -21,5 +35,5 @@ int main()
     getBalance();
     thankYou();
 
-    return 0;
+	return EXIT_SUCCESS;
 }
