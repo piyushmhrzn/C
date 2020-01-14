@@ -12,7 +12,7 @@ Description: C programming Essentials practices from Linda.com
 #define C24_MYMACROS_H_INCLUDED
 
 //Object-like macros
-#define NUMBERS 10,2,5,7,23,453,6,987,35
+#define NUMBERS 10,2,5,44,23,453,6,987,35
 
 //Function-like macros
 #define max(X, Y) ((X) > (Y) ? (X) : (Y))

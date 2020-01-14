@@ -13,5 +13,6 @@ Description: C programming Essentials practices from Linda.com
 
 double areaTrapezoid(double, double, double);
 float volumeSphere(float);
+int greatestNumber(int, int);
 
 #endif // C24_MYLIBRARY_H_INCLUDED

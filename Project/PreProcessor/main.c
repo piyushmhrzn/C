@@ -17,11 +17,16 @@ Description: C programming Essentials practices from Linda.com
 int main()
 {
     float x;
-    x = volumeSphere(5);
-    printf("The volume of a sphere with radius '5' = %f\n",x);
+    printf("Enter the radius for the sphere(cm): ");
+    scanf("%f",&x);
+
+    printf("The volume of a sphere with radius %.3f  cm= [%.3f ] cubic cm.\n",x,volumeSphere(x));
 
     int list[] = {NUMBERS};
-    printf("The 4th element in list is %d\n",list[3]);
+    int num = sizeof(list)/sizeof(int);
+
+    printf("\nThe 4th element in the list from MACRO Functions is [%d]\n",list[3]);
+    printf("The greatest number in the macros is [%d]\n",greatestNumber(list,num));
 
 	return EXIT_SUCCESS;
 }

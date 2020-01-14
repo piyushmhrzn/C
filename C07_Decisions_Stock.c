@@ -15,6 +15,12 @@ Description: C programming Essentials practices from Linda.com
 #define SELL_PRICE 54.2
 #define BUY_PRICE 28.5
 
+#define DEBUG_ON 1
+#define DEBUG_OFF 0
+
+//Globals
+int debugFlag = DEBUG_ON;
+
 //Function Prototype
 float askStockValue(void);
 void makeDecision(float value);
@@ -22,8 +28,13 @@ void handleTransaction(char action);
 
 int main()
 {
-    float value = askStockValue();
-    makeDecision(value);
+    printf("Check whether the Debug Status is [ON] or [OFF]\n");
+
+    if(debugFlag)
+    {
+        float value = askStockValue();
+        makeDecision(value);
+    }
     return EXIT_SUCCESS;
 }
 
@@ -60,19 +71,19 @@ void handleTransaction(char action)
     switch(action)
     {
         case 'b':
-            printf("I suggest you to buy more of this stock.\n");
+            printf("-------------->>[I suggest you to buy more of this stock.]<<--------------\n");
             break;
 
         case 's':
-            printf("I suggest you to sell this stock.\n");
+            printf("-------------->>[I suggest you to sell this stock.]<<--------------\n");
             break;
 
         case 'h':
-            printf("Let's wait and see what the market is doing.\n");
+            printf("-------------->>[Let's wait and see what the market is doing.]<<--------------\n");
             break;
 
         default:
-            printf("Sorry, I cannot provide any advice at this time.\n");
+            printf("-------------->>[Sorry, I cannot provide any advice at this time.]<<--------------\n");
     }
 }
 

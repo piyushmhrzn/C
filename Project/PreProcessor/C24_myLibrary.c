@@ -19,3 +19,19 @@ float volumeSphere(float r)
 {
     return (4.0/3.0)*M_PI*pow(r,2);
 }
+
+int greatestNumber(int arr[], int num)
+{
+    int i,max,temp;
+    max = arr[0];
+
+    for(i=0; i<num; i++)
+    {
+        if(arr[i]>max)
+        {
+           max =arr[i];
+        }
+    }
+    return max;
+}
+
