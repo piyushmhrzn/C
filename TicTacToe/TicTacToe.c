@@ -24,16 +24,19 @@ void display(char sys[]);
 int main()
 {
     char restart[1];
-    again:
-    run();
-    printf("\nTo Continue press 'Y':  ");
-    scanf("%s",restart);
-    if(*restart == 'y' || *restart == 'Y')
+
+    while(1)
     {
-        system("cls");
-        goto again;
-    }else{
-        exit(0);
+        //again:
+        run();
+        printf("\nTo Continue press 'Y':  ");
+        scanf("%s",restart);
+        if(*restart == 'y' || *restart == 'Y')
+        {
+            system("cls");
+        }else{
+            exit(0);
+        }
     }
     return EXIT_SUCCESS;
 }
@@ -45,20 +48,26 @@ void run()
     char symbol[9] = {'1','2','3','4','5','6','7','8','9'};
     display(symbol);
 
-    again:
-    info = inputValue(symbol,count);
-    //if user input correctly it will replace the value symbol[] with this value in current position
-    symbol[info.i] = info.ch;
-    system("cls");               //ClearScreen In-built Function
-    display(symbol);
-    if(check(symbol,info.ch,count) == 1);
-    else{
-        count++;
-        goto again;
+    while(1)
+    {
+        //again:
+        info = inputValue(symbol,count);
+        //if user input correctly it will replace the value symbol[] with this value in current position
+        symbol[info.i] = info.ch;
+        system("cls");               //ClearScreen In-built Function
+        display(symbol);
+        if(check(symbol,info.ch,count) == 1)
+        {
+            break;
+        }
+        else{
+            count++;
+            //goto again;
+            }
     }
 }
 
-int check(char sym[], char ch[], int count)
+int check(char  sym[], char ch[], int count)
 {
     int i;
     for(i=0; i<9; i+=3)      //for Row
@@ -101,7 +110,7 @@ int check(char sym[], char ch[], int count)
 struct myDataType inputValue(char sym[], int count){    //count is used to find out which user is inputing
     char value[1];                                  //value to hold the user input
     int i;
-    struct myDataType info;           //info to return the information from run function
+    struct myDataType info;           //info to return the information to run function
 
     inputAgain:
     if(count%2 == 0){                        //For user 1:even number and user 2: odd number
@@ -114,21 +123,24 @@ struct myDataType inputValue(char sym[], int count){    //count is used to find 
     //After taking the input value from user, we will match with the symbol of run function
     for(i=0; i<9; i++)
     {
-        if(*value == sym[i]){
-            info.i = i;                                 //when value matches symbol in run function,store count in info.i
-            if(count%2==0){               //input value accordingly to user 1 or user 2
+        if(*value == sym[i])
+        {
+            info.i = i;                                  //when value matches symbol in run function,store count in info.i
+            if(count%2==0)                  //input value accordingly to user 1 or user 2
+            {
                 info.ch = 'X';                      //store character symbol inside info.ch
             }
             else{
                 info.ch = 'O';
             }
-            break;
+            break;                                  //end loop
         }else{
             info.i = -1;
             info.ch = "";
         }
     }
-    if(info.i == -1){
+    if(info.i == -1)
+    {
         printf("\nInput is not Valid\n");
         goto inputAgain;
     }
